@@ -347,6 +347,17 @@
             transform: translateY(-3px);
         }
 
+        .btn-download {
+            border-color: #ec4899 !important;
+            color: #ec4899 !important;
+        }
+
+        .btn-download:hover {
+            background: #ec4899 !important;
+            color: #fff !important;
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.4);
+        }
+
         /* ---------- SECTION COMMON ---------- */
         section {
             padding: 5rem 0;
@@ -586,45 +597,19 @@
             font-weight: 500;
         }
 
-        /* ---------- ACHIEVEMENTS ---------- */
-        .achievement-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .achievement-item {
-            background: rgba(22, 19, 43, 0.7);
-            backdrop-filter: blur(8px);
-            border-radius: 12px;
-            padding: 1.5rem 1.8rem;
-            border-left: 4px solid #a855f7;
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            perspective: 800px;
-            cursor: default;
-        }
-
-        .achievement-item h4 {
-            color: #f0edf7;
-            font-size: 1rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .achievement-item .ach-meta {
-            color: #a49bb8;
-            font-size: 0.85rem;
-        }
-
-        .achievement-item .ach-link {
-            color: #c084fc;
-            font-size: 0.85rem;
-            font-weight: 500;
+        .project-link {
             display: inline-block;
-            margin-top: 0.4rem;
+            margin-top: 0.8rem;
+            color: #c084fc;
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
-        .achievement-item .ach-link:hover {
+        .project-link i {
+            margin-right: 0.3rem;
+        }
+
+        .project-link:hover {
             color: #ec4899;
         }
 
@@ -699,8 +684,7 @@
 
         /* ---------- "POP" INTERACTION ---------- */
         .card.pop-active,
-        .edu-card.pop-active,
-        .achievement-item.pop-active {
+        .edu-card.pop-active {
             transform: scale(1.03) !important;
             border-color: rgba(168, 85, 247, 0.7) !important;
             box-shadow: 0 0 40px rgba(168, 85, 247, 0.3) !important;
@@ -798,10 +782,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .achievement-list {
-                grid-template-columns: 1fr;
-            }
-
             .contact-links {
                 flex-direction: column;
                 align-items: center;
@@ -855,7 +835,7 @@
     <!-- ========== HERO ========== -->
     <section id="hero">
         <div class="hero-grid">
-            <!-- Profile Photo (make sure your file name matches exactly) -->
+            <!-- Profile Photo -->
             <div class="hero-image">
                 <img 
                     src="Sujitha S image.jpeg" 
@@ -863,27 +843,31 @@
                     class="profile-img" 
                 />
             </div>
-            <!-- Text Content -->
             <div class="hero-text">
                 <div class="hero-badge">
                     <i class="fas fa-code" style="margin-right:6px;"></i> Software Engineer · Full Stack Developer
                 </div>
                 <h1>Sujitha S</h1>
                 <p class="subtitle">CSE (AI &amp; ML) · Developer · Problem Solver</p>
-                <!-- NEW OBJECTIVE (Updated from your latest PDF) -->
                 <p class="tagline">
-                    Enthusiastic Computer Science &amp; Engineering (AI &amp; ML) student passionate about Software Engineering, Full Stack Development, and building innovative software solutions. Possessing a strong foundation in Java, web technologies, databases, and object-oriented programming through academic projects and internship experience. Looking for an opportunity to contribute to impactful projects while enhancing my technical expertise and professional growth.
+                    Enthusiastic Computer Science &amp; Engineering (AI &amp; ML) student passionate about 
+                    <strong>Software Engineering and Full Stack Development</strong>, with a strong foundation in 
+                    Java, web technologies, databases, and OOP. Seeking opportunities to apply my technical and 
+                    problem-solving skills to build innovative software solutions while continuously enhancing my expertise.
                 </p>
                 <div class="hero-social">
                     <a href="mailto:sujitha0330@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/sujitha-s-306482327/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/sujithaS30" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
+                    <a href="https://sujitha30portfolio.netlify.app" target="_blank" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
                     <a href="tel:+919042051876" aria-label="Phone"><i class="fas fa-phone"></i></a>
                 </div>
                 <div class="hero-cta">
                     <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane" style="margin-right:8px;"></i>Get In Touch</a>
                     <a href="#projects" class="btn-secondary"><i class="fas fa-arrow-right" style="margin-right:8px;"></i>View Projects</a>
+                    <a href="Sujitha_S_Resume.pdf" download class="btn-secondary btn-download">
+                        <i class="fas fa-file-pdf" style="margin-right:8px;"></i>Download Resume
+                    </a>
                 </div>
             </div>
         </div>
@@ -945,7 +929,6 @@
         <div class="container">
             <h2 class="section-title"><span>Technical Skills</span></h2>
             <div class="skills-wrapper">
-                <!-- Programming Languages -->
                 <div class="skill-category">
                     <h4><i class="fas fa-code" style="margin-right:8px;color:#a855f7;"></i>Programming Languages</h4>
                     <div class="skill-tags">
@@ -953,7 +936,6 @@
                         <span class="skill-tag">Python (Basic)</span>
                     </div>
                 </div>
-                <!-- Web Technologies -->
                 <div class="skill-category">
                     <h4><i class="fas fa-globe" style="margin-right:8px;color:#a855f7;"></i>Web Technologies</h4>
                     <div class="skill-tags">
@@ -962,14 +944,12 @@
                         <span class="skill-tag">JavaScript</span>
                     </div>
                 </div>
-                <!-- Database -->
                 <div class="skill-category">
-                    <h4><i class="fas fa-database" style="margin-right:8px;color:#a855f7;"></i>Database</h4>
+                    <h4><i class="fas fa-database" style="margin-right:8px;color:#a855f7;"></i>Database Technologies</h4>
                     <div class="skill-tags">
                         <span class="skill-tag">MySQL</span>
                     </div>
                 </div>
-                <!-- Core Subjects -->
                 <div class="skill-category">
                     <h4><i class="fas fa-graduation-cap" style="margin-right:8px;color:#a855f7;"></i>Core Subjects</h4>
                     <div class="skill-tags">
@@ -979,7 +959,6 @@
                         <span class="skill-tag">Operating System</span>
                     </div>
                 </div>
-                <!-- Soft Skills -->
                 <div class="skill-category">
                     <h4><i class="fas fa-users" style="margin-right:8px;color:#a855f7;"></i>Soft Skills</h4>
                     <div class="skill-tags">
@@ -1005,11 +984,6 @@
                     <p>Core Java fundamentals — object-oriented programming, data structures, and problem-solving.</p>
                 </div>
                 <div class="card">
-                    <h3>Introduction to IoT &amp; Digital Transformation</h3>
-                    <p class="meta">Futureskillsprime Nasscom</p>
-                    <p>Foundational understanding of IoT ecosystems and digital transformation strategies.</p>
-                </div>
-                <div class="card">
                     <h3>Introduction to Machine Learning</h3>
                     <p class="meta">NPTEL</p>
                     <p>Comprehensive introduction to machine learning concepts, algorithms, and applications.</p>
@@ -1031,13 +1005,13 @@
                 <div class="card">
                     <h3>Virtual Intern</h3>
                     <p class="meta">Infosys Springboard · Dec 2025 – Jan 2026 (Online)</p>
-                    <p>Developed a Banking Simulation Activity Platform using Java to simulate core banking operations such as account creation, deposits, withdrawals, and balance inquiry. Gained hands-on experience in model development, testing, and performance analysis.</p>
-                    <div class="tags"><span>Java</span><span>Banking</span><span>Testing</span></div>
+                    <p>Gained hands-on experience in integrating frontend, backend, and database development workflows while learning data handling, backend connectivity, and application components.</p>
+                    <div class="tags"><span>Java</span><span>Backend</span><span>Database</span></div>
                 </div>
                 <div class="card">
                     <h3>Web Development Intern</h3>
-                    <p class="meta">Kevell Guru · Jan 2025 (Madurai, Offline)</p>
-                    <p>Enhanced UI layouts and visual consistency across web pages, improving usability and overall user experience through better spacing, color, and component design. Collaborated closely with the development team to translate design ideas into functional interfaces.</p>
+                    <p class="meta">Kevell Guru · Jan 2025 – Feb 2025 (Madurai, Offline)</p>
+                    <p>Enhanced responsive UI layouts and implemented clean, user-friendly interfaces across web pages and devices, improving usability and visual consistency.</p>
                     <div class="tags"><span>UI/UX</span><span>HTML/CSS</span><span>Responsive</span></div>
                 </div>
             </div>
@@ -1047,19 +1021,33 @@
     <!-- ========== PROJECTS ========== -->
     <section id="projects" style="background: rgba(17, 16, 31, 0.4); backdrop-filter: blur(8px);">
         <div class="container">
-            <h2 class="section-title"><span>Academic Projects</span></h2>
+            <h2 class="section-title"><span>Projects</span></h2>
             <div class="card-grid">
+                <!-- Learnova -->
                 <div class="card">
-                    <h3>Banking Simulation Platform</h3>
-                    <p class="meta">Core Banking Operations</p>
-                    <p>Developed a Banking Simulation Platform to simulate core banking operations such as account management, transactions, and balance tracking for learning real-world banking system workflows.</p>
-                    <div class="tags"><span>Java</span><span>OOP</span><span>Simulation</span></div>
+                    <h3>Learnova</h3>
+                    <p class="meta">AI-Powered Code Analysis &amp; Learning Platform</p>
+                    <p>Developed an AI-driven learning platform that automates code error analysis for Python and Java, offers interactive code Q&A, and visualizes complex code logic through step-by-step animations.</p>
+                    <div class="tags">
+                        <span>Python</span><span>FastAPI</span><span>React.js</span>
+                        <span>Google Gemini API</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://learnova-python-compiler.vercel.app/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
                 </div>
+                <!-- InvoSense AI -->
                 <div class="card">
                     <h3>InvoSense AI</h3>
                     <p class="meta">Invoice Processing Agent</p>
-                    <p>Developed a full-stack AI invoice processing system using Java, Spring Boot, and MongoDB. Integrated LLM-based extraction and vector similarity search to automate duplicate detection and financial record management.</p>
-                    <div class="tags"><span>Spring Boot</span><span>MongoDB</span><span>LLM</span><span>Vector Search</span></div>
+                    <p>Developed an AI-powered invoice processing system that automates invoice data extraction and detects duplicate and near-duplicate invoices using vector similarity search.</p>
+                    <div class="tags">
+                        <span>Java</span><span>Spring Boot</span><span>MongoDB</span>
+                        <span>Gemini API</span><span>Docker</span><span>Render</span>
+                    </div>
+                    <a href="https://invosight-ai.onrender.com/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
                 </div>
             </div>
         </div>
@@ -1089,7 +1077,7 @@
                 <a href="tel:+919042051876"><i class="fas fa-phone"></i> +91 90420 51876</a>
                 <a href="https://www.linkedin.com/in/sujitha-s-306482327/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
                 <a href="https://github.com/sujithaS30" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
+                <a href="https://sujitha30portfolio.netlify.app" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
             </div>
             <footer>
                 &copy; 2026 Sujitha S. Crafted with <i class="fas fa-heart" style="color:#ec4899;"></i> &amp; <i class="fas fa-coffee" style="color:#c084fc;"></i>
@@ -1148,9 +1136,8 @@
         });
 
         // ---------- 🔥 UNIQUE "POP THE BOX" 3D EFFECT ----------
-        const interactiveBoxes = document.querySelectorAll('.card, .edu-card, .achievement-item');
+        const interactiveBoxes = document.querySelectorAll('.card, .edu-card');
 
-        // Desktop: 3D Tilt on mouse move
         interactiveBoxes.forEach(box => {
             box.addEventListener('mousemove', function(e) {
                 const rect = this.getBoundingClientRect();
